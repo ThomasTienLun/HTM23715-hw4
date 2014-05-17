@@ -46,7 +46,7 @@ window.fbAsyncInit = function(){
     // 1. 讓使用者登入此 Facebook App (FB.login)
     FB.login(function(){
       console.log('Logged in!');
-      FB.api('/me/groups', function(resp){
+      FB.api("/me/groups", function(resp){
         console.log('User groups:', resp.data);
         var i;
         for( i=0; i<resp.data.length; i+=1){
@@ -60,13 +60,13 @@ window.fbAsyncInit = function(){
     },{scope: 'user_groups'});
     // 2. 以 FB.api 拿到使用者的 group 列表
     // 拿到使用者 group 列表的 response 之後：
-    FB.api(
-    //"/me/groups",
-    function (response) {
-      if (response && !response.error) {
+    //FB.api(
+    //"/me/groups",function (resp) {
+    //  if (resp && !resp.error) {
+
         /* handle the result */
-      }
-    }
+    //  }
+    //}
 );
 
 
