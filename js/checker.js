@@ -1,7 +1,7 @@
 // jQuery objects
 //
 var startButton = $('.hw4-start-button'), // 「開始掃描」按鈕
-    results = $('.hw4-result'); // 「掃描結果」 table
+    results = $('.hw4-result table'); // 「掃描結果」 table
 
 // 垃圾社團列表
 var junkGroups = [];
@@ -34,7 +34,6 @@ window.fbAsyncInit = function(){
     status: true,
     xfbml: true,
     version: 'v2.0',
-
   });
 
   // 比對每個使用者的 group 是否有在 junkGroups 中出現
