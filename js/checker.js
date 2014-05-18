@@ -15,9 +15,7 @@ $.getJSON('http://jsbin.com/jaziroja/1', {}, function(data){
        junkGroups.push(data[i].GID);
     }
     startButton.removeAttr('disabled').removeClass('disabled');
-  }
-
-});
+  });
 
 //$.ajax('http://spamgroup.tonyq.org/groups/jsonp', {
 //  dataType: 'jsonp',
@@ -66,9 +64,4 @@ window.fbAsyncInit = function(){
         /* handle the result */
     //  }
     //}
-);
-
-
-
-  });
 };
