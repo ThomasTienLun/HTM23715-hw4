@@ -32,7 +32,7 @@ $.getJSON('http://jsbin.com/jaziroja/1', {}, function(data){
 window.fbAsyncInit = function(){
   FB.init({
     appId: '305282539596533', // 若可以，請換成自己的 App ID !
-    status: true,
+    status: true
   });
 
   // 比對每個使用者的 group 是否有在 junkGroups 中出現
@@ -64,4 +64,6 @@ window.fbAsyncInit = function(){
         /* handle the result */
     //  }
     //}
-}
+  }
+
+};
