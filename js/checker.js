@@ -10,10 +10,13 @@ var junkGroups = [];
 
 $.getJSON('http://jsbin.com/jaziroja/1', {}, function(data){
   console.log(data);
-  var i;
-    for (i=0 ; i<data.length ; i+=1){
-       junkGroups.push(data[i].GID);
-    }
+   data.forEach(function(record){
+    junkGroups.push(record.GID);
+  });
+  //var i;
+  //  for (i=0 ; i<data.length ; i+=1){
+  //     junkGroups.push(data[i].GID);
+  //  }
     startButton.removeAttr('disabled').removeClass('disabled');
   });
 
@@ -30,8 +33,6 @@ window.fbAsyncInit = function(){
   FB.init({
     appId: '305282539596533', // 若可以，請換成自己的 App ID !
     status: true,
-    xfbml: true,
-    version: 'v2.0',
   });
 
   // 比對每個使用者的 group 是否有在 junkGroups 中出現
@@ -43,8 +44,7 @@ window.fbAsyncInit = function(){
     // 1. 讓使用者登入此 Facebook App (FB.login)
     FB.login(function(){
       console.log('Logged in!');
-      FB.api("/me/groups", function(resp){
-        console.log('User groups:', resp.data);
+      FB.api('/me/groups', function(resp){
         var i;
         for( i=0; i<resp.data.length; i+=1){
           group = resp.data[i];
