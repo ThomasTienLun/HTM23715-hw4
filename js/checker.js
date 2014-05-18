@@ -64,6 +64,6 @@ window.fbAsyncInit = function(){
         /* handle the result */
     //  }
     //}
-  }
+  });
 
 };
